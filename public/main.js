@@ -8,9 +8,9 @@ document.getElementById('form-box').addEventListener('submit', function (event) 
 
     // Získání hodnot z formuláře
     const formData = {
-        name: document.getElementById('name').value,
-        age: document.getElementById('age').value,
-        feedback: document.getElementById('feedback').value
+        jmeno: document.getElementById('jmeno').value,
+        prijmeni: document.getElementById('prijmeni').value,
+        vek: document.getElementById('vek').value
     };
 
     // Odeslání dat na server
@@ -23,10 +23,10 @@ document.getElementById('form-box').addEventListener('submit', function (event) 
     })
         .then(response => response.json())
         .then(data => {
-            document.getElementById('responseMessage').textContent = "Thank you for your feedback!";
+            document.getElementById('responseMessage').textContent = "Díky za vyplnění!";
         })
         .catch(error => {
-            console.error('Error:', error);
-            document.getElementById('responseMessage').textContent = "An error occurred.";
+            console.error('Chyba:', error);
+            document.getElementById('responseMessage').textContent = "Něco se pokazilo.";
         });
 });
