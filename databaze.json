@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "jmeno": "Jan",
+    "prijmeni": "Novák",
+    "vek": "23",
+    "oblibenyJazyk": "Python"
+  }
+]

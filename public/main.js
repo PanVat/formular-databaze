@@ -4,17 +4,18 @@ function hodnotaPosuvniku(hodnota) {
 }
 
 document.getElementById('form-box').addEventListener('submit', function (event) {
-    event.preventDefault(); // Zabrání odeslání formuláře klasickým způsobem
+    event.preventDefault(); /* Zabrání odeslání formuláře klasickým způsobem */
 
-    // Získání hodnot z formuláře
+    /* Získání hodnot z formuláře */
     const formData = {
         jmeno: document.getElementById('jmeno').value,
         prijmeni: document.getElementById('prijmeni').value,
-        vek: document.getElementById('vek').value
+        vek: document.getElementById('vek').value,
+        oblibenyJazyk: document.querySelector('input[name="oblibeny-jazyk"]:checked')?.value || "nevybráno"
     };
 
-    // Odeslání dat na server
-    fetch('/save-survey', {
+    /* Odeslání dat na server */
+    fetch('submit', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
