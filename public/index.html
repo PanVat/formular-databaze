@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Formuláře</title>
+  </head>
+  <body>
+    <div id="form-box">
+      <h1>Formulář</h1>
+      <form action="">
+        <div id="doplnovani">
+          <label for="jmeno">Jméno</label><br />
+          <input
+            type="text"
+            id="jmeno"
+            placeholder="Zadejté své křestní jméno"
+            required
+          /><br />
+          <label for="prijmeni">Příjmení</label><br />
+          <input
+            type="text"
+            id="prijmeni"
+            placeholder="Zadejte své příjmení"
+            required
+          /><br />
+          <label for="vek">Kolik je vám let?</label><br />
+          <input type="range" id="vek" min="1" max="150" step="1" value="50" oninput="hodnotaPosuvniku(this.value)" required>
+          <span id="hodnotaVeku">50</span>
+        </div>
+        <h3>Který programovací jazyk je váš oblíbený?</h3>
+        <div id="prog-jazyk">
+          <input
+            type="radio"
+            id="javascript"
+            name="oblibeny-jazyk"
+            value="JavaScript"
+          />
+          <label for="JavaScript">JavaScript</label><br />
+          <input
+            type="radio"
+            id="python"
+            name="oblibeny-jazyk"
+            value="Python"
+          />
+          <label for="Python">Python</label><br />
+          <input type="radio" id="c++" name="oblibeny-jazyk" value="C++" />
+          <label for="C++">C++</label><br />
+        </div>
+        <input type="submit" value="Odeslat" /><br />
+      </form>
+      <p id="responseMessage"></p>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
